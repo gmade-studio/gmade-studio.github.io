@@ -1,4 +1,3 @@
-import { reveal, revealMarkdown, revealHighlight, revealMath, revealSearch, revealNotes, revealZoom } from "D:/gmadestudio-vuepress/node_modules/vuepress-plugin-md-enhance/lib/client/reveal/index.js";
+import { reveal, revealMarkdown, revealHighlight, revealMath, revealSearch, revealNotes, revealZoom } from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-plugin-md-enhance/lib/client/index.js";
 
-export const useReveal = () => [reveal(), revealMarkdown(), revealHighlight(), revealMath(), revealSearch(), revealNotes(), revealZoom()
-];
+export const useReveal = () => [reveal(), revealMarkdown(), revealHighlight(), revealMath(), revealSearch(), revealNotes(), revealZoom()];

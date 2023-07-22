@@ -1,28 +1,16 @@
 import { defineClientConfig } from "@vuepress/client";
+import { VPLink } from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-shared/lib/client/index.js";
 
-import CommonWrapper from "@theme-hope/components/CommonWrapper.js";
-import HomePage from "@theme-hope/components/HomePage.js";
-import NormalPage from "@theme-hope/components/NormalPage.js";
-import Navbar from "@theme-hope/modules/navbar/components/Navbar.js";
-import Sidebar from "@theme-hope/modules/sidebar/components/Sidebar.js";
-import Layout from "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/layouts/Layout.js";
-import NotFound from "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/layouts/NotFound.js";
+import { HopeIcon, Layout, NotFound, useScrollPromise, injectDarkmode, setupDarkmode, setupSidebarItems } from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-theme-hope/lib/bundle/export.js";
 
-import { useScrollPromise } from "@theme-hope/composables/index.js";
-import { injectDarkMode, setupDarkMode } from "@theme-hope/modules/outlook/composables/index.js";
-import { setupSidebarItems } from "@theme-hope/modules/sidebar/composables/index.js";
+import { defineAutoCatalogIconComponent } from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-plugin-auto-catalog/lib/client/index.js"
+import { BlogCategory, BlogHome, BlogType, BloggerInfo, Timeline, setupBlog } from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/export.js";
+import "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/styles/all.scss";
+import Slide from "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-plugin-md-enhance/lib/client/SlidePage.js";
 
-import "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
+import "/home/fallingstar/gitcode/gmade-studio.github.io/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
 
-
-import BloggerInfo from "@theme-hope/modules/blog/components/BloggerInfo.js";
-import BlogHome from "@theme-hope/modules/blog/components/BlogHome.js";
-import BlogPage from "@theme-hope/modules/blog/components/BlogPage.js";
-import { setupBlog } from "@theme-hope/modules/blog/composables/index.js";
-import "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/modules/blog/styles/layout.scss";
-import Slide from "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/layouts/Slide.js";
-import Blog from "D:/gmadestudio-vuepress/node_modules/vuepress-theme-hope/lib/client/modules/blog/layouts/Blog.js";
-
+defineAutoCatalogIconComponent(HopeIcon);
 
 export default defineClientConfig({
   enhance: ({ app, router }) => {
@@ -35,32 +23,27 @@ export default defineClientConfig({
     };
 
     // inject global properties
-    injectDarkMode(app);
+    injectDarkmode(app);
 
-    // register to inject styles
-    app.component("CommonWrapper", CommonWrapper);
-    app.component("HomePage", HomePage);
-    app.component("NormalPage", NormalPage);
-    app.component("Navbar", Navbar);
-    app.component("Sidebar", Sidebar);
+    // provide HopeIcon as global component
+    app.component("HopeIcon", HopeIcon);
+    // provide VPLink as global component
+    app.component("VPLink", VPLink);
 
-    
     app.component("BloggerInfo", BloggerInfo);
-    app.component("BlogHome", BlogHome);
-    app.component("BlogPage", BlogPage);
-    
   },
   setup: () => {
-    setupDarkMode();
+    setupDarkmode();
     setupSidebarItems();
     setupBlog();
-    
   },
   layouts: {
     Layout,
     NotFound,
+    BlogCategory,
+    BlogHome,
+    BlogType,
+    Timeline,
     Slide,
-    Blog,
-    
   }
 });

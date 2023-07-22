@@ -38,7 +38,7 @@
 <p>In this study, DL was utilized to classify PRCC and ChRCC from computed tomography (CT) datasets. The current study aimed to exploit DL-based models for renal cell carcinoma subtype classification based on small datasets so that the classification can be implemented in some scenarios without high-performance hardware or shortage of rare subtypes cases, to better promote the accuracy of radiological diagnosis.</p>
 <h2 id="methods" tabindex="-1"><a class="header-anchor" href="#methods" aria-hidden="true">#</a> Methods</h2>
 <p>Institutional review board approval was obtained. The requirement for written informed patient consent was waived. A retrospective review of PRCC and ChRCC patients at Fujian Medical University Union Hospital was performed between 2012 and 2021. Ethical approval was obtained from the Institutional Ethics Committee of Fujian Medical University Union Hospital (No. 2021WSJK033). According to the Helsinki Declaration, all patients (or their legal clients) provided written informed consent before obtaining their clinical, radiological, and pathological data. The framework used to develop an automated method for the differentiation of these two subtypes was comprised of two phases (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#f1" target="_blank" rel="noopener noreferrer">Figure 1<ExternalLinkIcon/></a>): 1) CT scan data, clinical data, and pathological data were gathered and digitized, followed by tumor lesion segmentation and labeling by experts in the radiology department (dataset establishment); and 2) training neural networks; assessing the accuracy, sensitivity, and specificity of the models; and verifying model efficiency through comparison with the pathological diagnosis of new cases (subtype classification).</p>
-<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f1-1024x549.jpg" alt="" loading="lazy"></p>
+<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f1-1024x549.jpg" alt=""></p>
 <p><strong>Figure 1</strong> Flowchart of automated PRCC/ChRCC classification using computer vision.</p>
 <h3 id="phase-1" tabindex="-1"><a class="header-anchor" href="#phase-1" aria-hidden="true">#</a> Phase 1</h3>
 <h4 id="dataset-establishment" tabindex="-1"><a class="header-anchor" href="#dataset-establishment" aria-hidden="true">#</a> Dataset Establishment</h4>
@@ -47,7 +47,7 @@
 <h4 id="subtype-classification" tabindex="-1"><a class="header-anchor" href="#subtype-classification" aria-hidden="true">#</a> Subtype Classification</h4>
 <h5 id="model-training-and-validation" tabindex="-1"><a class="header-anchor" href="#model-training-and-validation" aria-hidden="true">#</a> Model Training and Validation</h5>
 <p>Six pop models [MobileNetV2 (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B17" target="_blank" rel="noopener noreferrer">Howard et al., 2017<ExternalLinkIcon/></a>), EfficientNet (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B18" target="_blank" rel="noopener noreferrer">Tan &amp; Le, 2019<ExternalLinkIcon/></a>), ShuffleNet (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B19" target="_blank" rel="noopener noreferrer">Ma et al., 2018<ExternalLinkIcon/></a>), ResNet-34, ResNet-50, and ResNet-101 (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B20" target="_blank" rel="noopener noreferrer">He et al., 2016<ExternalLinkIcon/></a>)] were adapted for dichotomy based on TensorFlow 2.4.12. Preprocessing involved normalization and augmentation (including Gaussian blur, rotation, flipping, brighter, and darker) (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#f2" target="_blank" rel="noopener noreferrer">Figure 2<ExternalLinkIcon/></a>). In addition to data augmentation, ConvBNReLU (convolution + batch normalization + ReLU) was applied to avoid overfitting. The learning rate was initially set as 0.005 and was optimized by the Adaptive Moment Estimation (ADAM) optimization algorithm in every training phase. The batch size was set as 24. For model training, a desktop workstation with an Intel® Xeon® E5-2678 v3 CPU and an NVIDIA GeForce RTX 2080Ti (11 GB) GPU was used. A list of model parameters, training results, and validation/accuracy results is provided in <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#t1" target="_blank" rel="noopener noreferrer">Table 1<ExternalLinkIcon/></a>.</p>
-<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f2-1024x461.jpg" alt="" loading="lazy"></p>
+<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f2-1024x461.jpg" alt=""></p>
 <p><strong>Figure 2</strong> An example of data augmentation processing. Based on the geometric transformations (rotation and flipping), the Gaussian blur, brighter, and darker were applied, which finally achieved 15× amplification.</p>
 <p><strong>Table 1</strong> The results of CNN-based networks for classification task training and validation and the testing results of the models.</p>
 <table>
@@ -131,7 +131,7 @@
 <td>PRCC</td>
 <td>Female</td>
 <td>60</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -141,7 +141,7 @@
 <td>PRCC</td>
 <td>Male</td>
 <td>58</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -151,7 +151,7 @@
 <td>PRCC</td>
 <td>Male</td>
 <td>57</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -161,7 +161,7 @@
 <td>ChRCC</td>
 <td>Male</td>
 <td>62</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -171,7 +171,7 @@
 <td>ChRCC</td>
 <td>Female</td>
 <td>41</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Mismatched</td>
 </tr>
@@ -181,7 +181,7 @@
 <td>ChRCC</td>
 <td>Female</td>
 <td>62</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -191,7 +191,7 @@
 <td>PRCC</td>
 <td>–</td>
 <td>–</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -201,7 +201,7 @@
 <td>PRCC</td>
 <td>–</td>
 <td>–</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Matched</td>
 </tr>
@@ -211,7 +211,7 @@
 <td>ChRCC</td>
 <td>–</td>
 <td>–</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Matched 2.Mismatched</td>
 </tr>
@@ -221,7 +221,7 @@
 <td>ChRCC</td>
 <td>–</td>
 <td>–</td>
-<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt="" loading="lazy"></td>
+<td><img src="http://gmade-studio.com/blog/publications/dl-based-classification/" alt=""></td>
 <td>Matched</td>
 <td>1.Mismatched 2.Matched</td>
 </tr>
@@ -510,9 +510,9 @@
 </tr>
 </tbody>
 </table>
-<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f3-1024x390.jpg" alt="" loading="lazy"></p>
+<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f3-1024x390.jpg" alt=""></p>
 <p><strong>Figure 3</strong> The visual structure of MobileNetV2.</p>
-<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f4.jpg" alt="" loading="lazy"></p>
+<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f4.jpg" alt=""></p>
 <p><strong>Figure 4</strong> The performance measure of this model, including the ROC curve, AUC (0.949), and confidence intervals (0.849, 1.000).</p>
 <h2 id="discussion" tabindex="-1"><a class="header-anchor" href="#discussion" aria-hidden="true">#</a> Discussion</h2>
 <p>Before a clinical treatment strategy is developed, the gold standard for the differentiation of subtypes is pathological diagnosis by histological biopsy. Nevertheless, this invasive operation may increase the possibility of needle tract implantation and the metastasis of malignant tumors, as well as the risks of bleeding, infection, and damage to surrounding organs caused by puncture operations. Furthermore, the missed diagnosis rate is approximately 30% (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B21" target="_blank" rel="noopener noreferrer">Soulen, 2018<ExternalLinkIcon/></a>). An ideal renal tumor diagnosis method should avoid unnecessary damage to patients and potential risks as much as possible while ensuring high accuracy and a high detection rate, which points to the need to further improve auxiliary examination image processing technology to increase sensitivity and accuracy, as it has great prospects.</p>
@@ -520,7 +520,7 @@
 <p>As a typical DL algorithm, due to their interlayer parameter sharing characteristics and sparse connection characteristics of the model architecture, CNNs can realize the automated extraction of pixel-level image features without the need to establish and engineer large-scale features in advance, and due to the real-time nature of the model itself, features such as flexibility, associative information storage, and backpropagation algorithm change weights can achieve higher processing accuracy with manual data than traditional machine learning, prompting high-throughput automation based on the feasibility of CNN/DCNN models for imaging and omics analyses. The application of comprehensive digitized clinical data, radiological images, and pathological data has paved the way for automated processing methods based on AI for radiological data processing in the future. In recent years, various studies have started utilizing complete digital radiological and clinical data for segmentation and classification (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B22" target="_blank" rel="noopener noreferrer">Cicek et al., 2016<ExternalLinkIcon/></a>; <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B23" target="_blank" rel="noopener noreferrer">Zhou et al., 2016<ExternalLinkIcon/></a>), verifying the feasibility of this scheme. In nephrology oncology, study interests that incorporated AI started focusing on subtype classification. <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B24" target="_blank" rel="noopener noreferrer">Tanaka et al. (2020)<ExternalLinkIcon/></a>, based on the Inception-v3 CNN model and MR images, identified benign and malignant renal masses (≤4 cm) on images with an accuracy rate of 88%. Based on a CNN model and CT images, <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B25" target="_blank" rel="noopener noreferrer">Baghdadi et al. (2020)<ExternalLinkIcon/></a> identified benign renal oncocytoma and ChRCC on images with an accuracy rate of 95%. <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B26" target="_blank" rel="noopener noreferrer">Zhou et al. (2019)<ExternalLinkIcon/></a> applied transfer learning to classify benign and malignant kidney tumors with CT datasets, and the accuracy of the difference was reported to be 0.95. <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B27" target="_blank" rel="noopener noreferrer">Lee et al. (2018)<ExternalLinkIcon/></a> developed a model that combined DL and manual feature machine learning to classify specific kidney tumor types, and the accuracy was 0.77. These studies prove that the imaging differentiation of kidney tumors based on DL and dichotomy is feasible but lacks utility and requires high-performance hardware, limiting the research results to the clinic. The present models show the possibility of using a high-confidence DL-based diagnostic method for the radiological classification of PRCC/ChRCC and provide a feasible low-performance hardware program with high accuracy for different medical devices that can be applied even to a gaming laptop or a mobile workstation.</p>
 <p>There were some new findings obtained during training and validation that have not been reported in research in the same field. First, according to the experimental results, we speculate that the valuable features of PRCC/ChRCC on CT images are commonly overlooked, which indicates that the fewer trainable parameters the model has, the better the accuracy it achieves. Although the feature capacity of the models is correlated linearly with the number of parameters, the number of parameters is seemingly correlated with fitting situations in a parabola. In the lightest model, ShuffleNet, performance is the worst in these coverage models. The best performance is from the MobileNetV2, with a bigger capacity of parameters than ShuffleNet. However, as the number of parameters is continuously increasing, the accuracy is decreasing (ResNet-34). Importantly, too many trainable parameters in this task can cause model under-/overfitting (ResNet-50/ResNet-101). The relation between accuracy and parameters during the classification of small datasets needs further explanation and selection. However, this interesting finding shows the importance of feature capacity assessment of datasets and the right choice of models with a suitable size before promoting performances. Finally, we noticed that extreme data augmentation has little effect on training. We tried several ways to augment and amplify datasets to increase their size, which obviously did not affect the accuracy of the validation dataset.</p>
 <p>This study had two main aims: 1) to make the automated classification methods easy to use with broad applicability to provide a highly accurate method that can be used in basic health units and deployed in medical centers with low-performance hardware and 2) to combine these methods with those used in federal studies, which can be used for multicenter studies and to increase model accuracy without the need to gather all the data. The deployment of such a model in devices at health centers will promote clinical treatment. Our future goal is to migrate this processing paradigm to other RCC subtypes. Although this study provides the first automated method for the radiological classification of PRCC/ChRCC subtypes, there are still some limitations. 1) The main limitation is the lack of multicenter validation, and the other limitations include the sizes of the training, validation, and testing datasets, which will be considered in future studies. Our methods used to avoid overfitting included data augmentation and ConvBNReLU but should have been more diverse. Also, due to the limited dataset capacity, the ROC curve was unsmoothed. 2) The underutilization of digital clinical data is another limitation. The conjunctive use of clinical and radiological data can further improve the prediction accuracy. 3) The underuse of multiphase sequences could be considered another limitation of our study. In our study, we exported images based on one patient–one phase. 4) Our dataset was mainly obtained from East Asian patients, and since a population-based analysis reported that racial disparities exist between black and white people in kidney cancer (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B28" target="_blank" rel="noopener noreferrer">Chung et al., 2015<ExternalLinkIcon/></a>), the upshot of our study would have bias in the East Asian population. Multiple factors including race, gender, and age could be taken into consideration for further exploration. 5) Our validation dataset was based on a dataset from our hospital, but it was not the best choice and had a certain effect on the results of training. The ideal validation dataset should be based on three or more datasets from different institutes. The small size of the testing dataset could also have led to a controversy about the results of MobileNetV2, which need to be further tested in multiple centers. 6) Processing of datasets by experts may not be regarded as the best method. Ideally, an automated segmentation procedure contained in the pipeline may be a better choice. However, there were some barriers laid that could hardly be bypassed. We tried two proposals: individual tumor output and area output. We applied U-Net-based methods to draw ROIs and found that the methods of existing reports (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B29" target="_blank" rel="noopener noreferrer">Fabian &amp; Maier-Hein, 2019<ExternalLinkIcon/></a>; <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B31" target="_blank" rel="noopener noreferrer">Hou et al., 2019<ExternalLinkIcon/></a>; <a href="http://gmade-studio.com/blog/publications/dl-based-classification/#B30" target="_blank" rel="noopener noreferrer">Ma, 2019<ExternalLinkIcon/></a>) could not fit the need. In studies, tumor Dice scores were lower than 0.85 generally, which meant that some parts of tumor pixels could not be contained in the processed images and some radiological characters were lost unavoidably. The reason why we finally did not use this method was that this automated segmentation/classification-combined model had a performance lower than expected. Unless the method to improve the tumor Dice score obviously is developed, the automated segmentation–classification model efficiency has a rare possibility to reach the baseline of clinical application. We also tried YOLO-v3-based detection and area segmentation; however, it did not show better performances compared with existing ML-based methods, which finally led to its abandonment. Besides the technological challenges, the main reason why we did not introduce an automated segmentation into the pipeline was that in this study we focused more on the classification, and the key point was realizing the classification of subtypes with low capacity under a smaller feature engineering preprocessing and more automated processing compared with ML-based classification methods. As a challenge in DL-based radiomics, automated segmentation is our next study orientation. We are developing a possible method to realize our proposed DL-based radiological processing series, and we are also trying to integrate several models into a DL-based radiomics workstation (<a href="http://gmade-studio.com/blog/publications/dl-based-classification/#f5" target="_blank" rel="noopener noreferrer">Figure 5<ExternalLinkIcon/></a>).</p>
-<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f5-1024x683.jpg" alt="" loading="lazy"></p>
+<p><img src="http://gmade-studio.com/wp-content/uploads/2022/08/dl-based-classification-f5-1024x683.jpg" alt=""></p>
 <p><strong>Figure 5</strong> A demo of a DL-based radiomics workstation (next study).</p>
 <p>Overall, although there may be limitations in this study such as a small dataset and differences in races as well as in imaging single-center protocol, the research results may be biased to some extent. However, based on the result that a CNN-assisted diagnosis model with high diagnostic accuracy was developed in a single center of this study, it suggests that the AI research and development model adopted in this study has high clinical application potential in improving the accuracy of differential diagnosis of PRCC and ChRCC, at least in a single regional center. In the future, although there will be some difficult challenges in developing AI high diagnostic accuracy which was caused by some objective factors such as subtle potential differences in image feature led by the discrepancy between race and region and inability in high homogeneity in the imaging method, we still expect that the AI auxiliary renal tumor imaging diagnostic research can expand into different regions, different centers, and different races, together with bigger sample data to validate our conclusion, and can accurately classify as well as precisely and automatically segment multiple pathological types of renal tumor, with the aim of making it an auxiliary diagnostic imaging tool with wide clinical application prospects.</p>
 <h2 id="conclusions" tabindex="-1"><a class="header-anchor" href="#conclusions" aria-hidden="true">#</a> Conclusions</h2>

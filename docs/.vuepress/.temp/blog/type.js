@@ -1,14 +1,13 @@
-export const typeMap = {"article":{"/":{"path":"/article/","keys":["v-18afbfd4"]},"/zh/":{"path":"/zh/article/","keys":["v-0a84bec5"]}},"encrypted":{"/":{"path":"/encrypted/","keys":[]},"/zh/":{"path":"/zh/encrypted/","keys":[]}},"slide":{"/":{"path":"/slide/","keys":[]},"/zh/":{"path":"/zh/slide/","keys":[]}},"star":{"/":{"path":"/star/","keys":[]},"/zh/":{"path":"/zh/star/","keys":[]}},"timeline":{"/":{"path":"/timeline/","keys":["v-18afbfd4"]},"/zh/":{"path":"/zh/timeline/","keys":["v-0a84bec5"]}}}
+export const typeMap = {"article":{"/":{"path":"/article/","keys":["v-18afbfd4"]},"/zh/":{"path":"/zh/article/","keys":["v-0a84bec5"]}},"star":{"/":{"path":"/star/","keys":[]},"/zh/":{"path":"/zh/star/","keys":[]}},"timeline":{"/":{"path":"/timeline/","keys":["v-18afbfd4"]},"/zh/":{"path":"/zh/timeline/","keys":["v-0a84bec5"]}}};
 
 if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateBlogType) {
-    __VUE_HMR_RUNTIME__.updateBlogType(typeMap)
-  }
+  import.meta.webpackHot.accept();
+  if (__VUE_HMR_RUNTIME__.updateBlogType)
+    __VUE_HMR_RUNTIME__.updateBlogType(typeMap);
 }
 
-if (import.meta.hot) {
+if (import.meta.hot)
   import.meta.hot.accept(({ typeMap }) => {
-    __VUE_HMR_RUNTIME__.updateBlogType(typeMap)
-  })
-}
+    __VUE_HMR_RUNTIME__.updateBlogType(typeMap);
+  });
+
